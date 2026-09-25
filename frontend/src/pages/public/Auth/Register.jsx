@@ -51,7 +51,7 @@ const Register = () => {
       // 2. Strong Password Validation Rule
       // Min 8 chars, at least 1 uppercase, 1 lowercase, 1 number, and 1 special character
       const strongPasswordRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!\%*?&]{8,}$/;
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       if (!strongPasswordRegex.test(formData.password)) {
         throw new Error(
           "Password must be at least 8 characters long and include an uppercase letter, lowercase letter, number, and special character.",
