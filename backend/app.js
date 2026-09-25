@@ -12,7 +12,7 @@ const app = express();
 // ======================================================
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://locate-my-spares.vercel.app/",
+  "http://localhost:3000",
   process.env.FRONTEND_URL, // Production frontend URL (set in environment variables)
 ].filter(Boolean);
 
