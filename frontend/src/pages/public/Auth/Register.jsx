@@ -48,14 +48,9 @@ const Register = () => {
       if (formData.password !== formData.confirmPassword)
         throw new Error("Passwords do not match.");
 
-      // 2. Strong Password Validation Rule
-      // Min 8 chars, at least 1 uppercase, 1 lowercase, 1 number, and 1 special character
-      const strongPasswordRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-      if (!strongPasswordRegex.test(formData.password)) {
-        throw new Error(
-          "Password must be at least 8 characters long and include an uppercase letter, lowercase letter, number, and special character.",
-        );
+      // 2. Simplified Password Validation Rule (Minimum length 8 characters)
+      if (formData.password.length < 8) {
+        throw new Error("Password must be at least 8 characters long.");
       }
 
       // 3. Phone Number Validation
@@ -264,7 +259,7 @@ const Register = () => {
                 </div>
                 {/* Helper text for password rule */}
                 <p className="text-[11px] text-gray-500 dark:text-gray-400 px-1">
-                  Must be 8+ chars with uppercase, lowercase, number & symbol.
+                  Password must be at least 8 characters long.
                 </p>
               </div>
 
