@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* THIS ONE LINE IS THE MAGIC FIX FOR V4 DARK MODE */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth transition for Dark Mode toggling */
+@layer base {
+  body {
+    @apply transition-colors duration-300 ease-in-out bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
