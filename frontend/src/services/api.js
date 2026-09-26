@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.BACKEND_URL || "https://aetherplay-ui.onrender.com",
+  baseURL:
+    import.meta.env.BACKEND_URL || "https://locatemyspares-w514.onrender.com",
 });
 
 api.interceptors.request.use(
