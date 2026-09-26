@@ -2,7 +2,8 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL:
-    import.meta.env.BACKEND_URL || "https://locatemyspares-w514.onrender.com",
+    import.meta.env.BACKEND_URL ||
+    "https://locatemyspares-w514.onrender.com/api/v1",
 });
 
 api.interceptors.request.use(
