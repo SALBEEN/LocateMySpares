@@ -11,9 +11,9 @@ const app = express();
 // CORS Configuration (Supports local development & production)
 // ======================================================
 const allowedOrigins = [
+  process.env.FRONTEND_URL, // Production frontend URL (set in environment variables)
   "http://localhost:5173",
   "http://localhost:3000",
-  process.env.FRONTEND_URL, // Production frontend URL (set in environment variables)
 ].filter(Boolean);
 
 app.use(
