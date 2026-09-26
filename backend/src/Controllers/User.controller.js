@@ -2,7 +2,7 @@
 import User from "../Schemas/User.schema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import sendEmail from "../Utilities/sendEmail.utilities.js";
+import { sendEmail } from "../Utilities/sendEmail.utilities.js";
 
 // ----------------- SIGNUP -------------------
 
